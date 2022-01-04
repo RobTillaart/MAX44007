@@ -124,7 +124,7 @@ public:
   float   convertToLux(uint8_t datahigh, uint8_t datalow);
 
 
-p:
+protected:
   bool    setThreshold(uint8_t reg, float value);
   float   getThreshold(uint8_t reg);
 
