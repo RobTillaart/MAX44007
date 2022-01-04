@@ -14,8 +14,8 @@
 
 
 // MAX44007 KEY VALUES
-#define MAX4407_MIN_LUX                       (0.025)
-#define MAX4407_MAX_LUX                       (104448.0)
+#define MAX44007_MIN_LUX                       (0.025)
+#define MAX44007_MAX_LUX                       (104448.0)
 
 
 
@@ -206,9 +206,9 @@ float Max44007::convertToLux(uint8_t datahigh, uint8_t datalow)
 bool Max44007::setThreshold(const uint8_t reg, const float value)
 {
   // CHECK RANGE OF VALUE
-  if ((value < 0.0) || (value > MAX4407_MAX_LUX)) return false;
+  if ((value < 0.0) || (value > MAX44007_MAX_LUX)) return false;
 
-  uint32_t mantissa = round(value * (1.0 / MAX4407_MIN_LUX));     //  compile time optimized.
+  uint32_t mantissa = round(value * (1.0 / MAX44007_MIN_LUX));     //  compile time optimized.
   uint8_t exponent = 0;
   while (mantissa > 255)
   {
