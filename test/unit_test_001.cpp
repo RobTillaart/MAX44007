@@ -96,7 +96,7 @@ unittest(test_convertToLux)
   assertEqualFloat(0.850, LuxA.convertToLux(0x11, 0x01), 0.0001);
   fprintf(stderr, "\n");
 
-  assertEqualFloat(408.602, LuxA.convertToLux(0xEF, 0x0E), 1);
+  assertEqualFloat(103630, LuxA.convertToLux(0xEF, 0x0E), 1);
   assertEqualFloat(104448, LuxA.convertToLux(0xEF, 0x0F), 1);
   fprintf(stderr, "\ndone...\n");
 }
