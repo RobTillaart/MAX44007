@@ -14,7 +14,7 @@ Library for Max44007 I2C lux sensor.
 ## Description
 
 The Max44007 ambient light sensor is an I2C sensor, that has a 22 bit 
-dynamic range from 0.025 lux to 188,000 lux.
+dynamic range from 0.025 lux to 104,448 lux.
 
 This library is experimental and created by changing some key values in the
 very similar MAX44009 library. As there was no hardware available the library 
