@@ -194,7 +194,7 @@ float Max44007::convertToLux(uint8_t datahigh, uint8_t datalow)
 {
   uint8_t  exponent = datahigh >> 4;
   uint32_t mantissa = ((datahigh & 0x0F) << 4) + (datalow & 0x0F);
-  float lux = ((0x0001 << exponent) * MAX4407_MIN_LUX) * mantissa;
+  float lux = ((0x0001 << exponent) * MAX44007_MIN_LUX) * mantissa;
   return lux;
 }
 
