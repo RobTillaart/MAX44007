@@ -8,12 +8,10 @@
 
 # Max44007 I2C LUX sensor
 
-Library for Max44007 / GY-49 I2C lux sensor.
+Library for Max44007 I2C lux sensor.
 
 
 ## Description
-
-a.k.a. GY-49
 
 The Max44007 ambient light sensor is an I2C sensor, that has a 22 bit 
 dynamic range from 0.025 lux to 188,000 lux.
