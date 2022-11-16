@@ -92,7 +92,7 @@ public:
   float   getHighThreshold(void);
   bool    setLowThreshold(const float value);        //  returns false if value out of range
   float   getLowThreshold(void);
-  void    setThresholdTimer(const uint8_t value);    / / 2 seems practical minimum
+  void    setThresholdTimer(const uint8_t value);    //  2 seems practical minimum
   uint8_t getThresholdTimer();
 
   void    enableInterrupt()    { write(MAX44007_INTERRUPT_ENABLE, 1); };
