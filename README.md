@@ -2,8 +2,11 @@
 [![Arduino CI](https://github.com/RobTillaart/Max44007/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
 [![Arduino-lint](https://github.com/RobTillaart/Max44007/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/Max44007/actions/workflows/arduino-lint.yml)
 [![JSON check](https://github.com/RobTillaart/Max44007/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/Max44007/actions/workflows/jsoncheck.yml)
+[![GitHub issues](https://img.shields.io/github/issues/RobTillaart/Max44007.svg)](https://github.com/RobTillaart/Max44007/issues)
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/Max44007/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/RobTillaart/Max44007.svg?maxAge=3600)](https://github.com/RobTillaart/Max44007/releases)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/robtillaart/library/Max44007.svg)](https://registry.platformio.org/libraries/robtillaart/Max44007)
 
 
 # Max44007 I2C LUX sensor
@@ -49,15 +52,14 @@ is not tested yet. If you do, please share the results (on GitHub)
 
 ## Interface
 
-- **enum class Boolean { True, False }** enum class to prevent bool to be implicitly casted to int.
-
+```cpp
+#include "Max44007.h"
+```
 
 ### Constructor 
   
-- **Max44007(uint8_t address, uint8_t dataPin, uint8_t clockPin)** Constructor with dataPin (sda) and clockPin (scl) for ESP32 and ESP8266.
-- **Max44007(uint8_t address, begin = Boolean::True)** Constructor for other boards e.g. UNO.
-- **Max44007(begin = Boolean::True)** Constructor with default I2C address 0x4A == 74.
-- **void configure(uint8_t address, TwoWire \*wire, begin = Boolean::True)** Change I2C interface and address.
+- **Max44007(const uint8_t address = MAX44007_DEFAULT_ADDRESS, TwoWire \*wire = &Wire)** Constructor.
+Optional address and optional I2C interface.\
 - **bool isConnected()** returns true if the device address configured is available on I2C bus.
 
 
@@ -174,9 +176,29 @@ Do not forget to connect the address pin as you cannot read the sensor
 in a reliable way. As the line will float it will sometimes have the
 right address and sometimes not. (been there ;)
 
+Pull ups on I2C bus are recommended.
+
 
 ## Future
 
+#### Must
+
 - follow MAX44009
+
+#### Should
+
+#### Could
+
 - Merge MAX44007 into MAX44009 class hierarchy.
+
+#### Wont
+
+
+## Support
+
+If you appreciate my libraries, you can support the development and maintenance.
+Improve the quality of the libraries by providing issues and Pull Requests, or
+donate through PayPal or GitHub sponsors.
+
+Thank you,
 
