@@ -23,6 +23,8 @@ This library is experimental and created by changing some key values in the
 very similar MAX44009 library. As there was no hardware available the library 
 is not tested yet. If you do, please share the results (on GitHub)
 
+Note: version 0.2.0 simplified the constructor interface and removed **configure()**.
+
 
 ## Schema breakout Max44007
 
@@ -61,6 +63,8 @@ is not tested yet. If you do, please share the results (on GitHub)
 - **Max44007(const uint8_t address = MAX44007_DEFAULT_ADDRESS, TwoWire \*wire = &Wire)** Constructor.
 Optional address and optional I2C interface.\
 - **bool isConnected()** returns true if the device address configured is available on I2C bus.
+
+NOTE: The user must call **Wire.begin()** or **Wire.begin(SDA, SCL)** in **setup()**.
 
 
 ### Basic 
